@@ -1,0 +1,12 @@
+[Unit]
+Description=Systematic ITM Ansible Enrollment Worker (enroller)
+
+[Service]
+Type=simple
+User=enroller
+ExecStart=/opt/enrolld/enroller
+Restart=always
+LimitNOFILE=49152
+
+[Install]
+WantedBy=multi-user.target
